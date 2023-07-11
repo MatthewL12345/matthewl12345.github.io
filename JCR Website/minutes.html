@@ -1,0 +1,115 @@
+<doctype html>
+<html>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!makes page scalable for mobile devicies>
+
+	<head>
+		<link rel="icon" type="image/png" href="favicon.png">
+		<title>Minutes</title> <!the title of the page>
+		<link rel="stylesheet" href="main.css"> <!links page to the css stylesheet>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> <!imports bootstrap>
+		
+		
+		</head>
+	<body>
+		
+		<header>
+			<div class="topbar">
+			<img id="navbanner" src="images/navbanner.png"> <!sets the image for the top bar>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-pendle"> <!cahnges the colour of navbar backgroud and text>
+			<div class="container-fluid">
+			<a class="navbar-brand" href="#"><img src="images/navicon.png"></a> <!image with pendle college and logo>
+			<a class="navbar-brand1" href="#"><img src="images/navtitle.png"></a> <!just pendle college>
+			<a class="navbar-brand2" href="#"><img src="images/navblock.png"></a> <!green box for space>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span> <!open and collapse the menue>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!navbar will become menu if the screen is medium size>
+				<li class="nav-item">
+				<a class="nav-link active" href="index.html">Home</a> <!link to home page>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link active" href="jcr.html">Meet the JCR</a> <!link to meet the JCR>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link active" href="sports.html">Sports Teams</a> <!link to sports teams>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link active" href="welcome.html">Welcome Week</a> <!link to welcome week>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link active" href="events.html">Events</a> <!link to events>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link active" href="brew.html">Pendle Brew</a> <!link to pendle brew>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link selected" aria-current="page" href="minutes.html">Minutes</a> <!link to minutes (current page)>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link active" href="contact.html">Contact</a> <!link to contact>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link active" href="faq.html">FAQ</a> <!link to FAQ>
+				</li>
+				
+			</ul>
+			
+			</div>
+		</div>
+		</nav>
+		</div>
+	</header>
+	
+		<div id="banner">
+			<img class = "bannerimg" src="images/tempbanner.png"> <!the banner image for this page>
+		</div>
+		
+		<div id="containermain">
+			<div id="main"> <!main content for this page goes in here>
+
+				<div class="brew"> 
+					
+					<div class="headingdesc">
+						<h2> Minutes</h2> <!heading minutes>
+						<div class = yline> </div> <!the yellow line under the heading>
+						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim vel lectus nec congue. Sed quis lorem metus. Nullam id quam id velit scelerisque posuere. Pellentesque at quam ac lacus dictum condimentum ac a justo. Nunc suscipit, neque vitae congue ultrices, risus nunc facilisis erat, vitae ultricies tellus lorem eget lorem. Cras eu turpis lacus. Vivamus lobortis, orci non feugiat varius, lorem sem vestibulum mi, id vehicula nibh ipsum at erat. Nullam lacinia metus dolor, id viverra enim auctor id. Mauris id tincidunt nulla, eget lobortis mi.</p>
+					</div>
+				</div> 
+
+				<div class = "eventbar"></div>
+
+				<div id = "minutes"></div>
+
+			</div>
+		</div>
+
+		<script>
+			let jsonData = document.getElementById('minutes');
+
+			fetch('./minutes.json') //fetch gets the data from welcome.json
+			.then(res => res.json()) //converts the json to normal javascript
+			.then(data => { //parsed data
+				data.forEach(post => {
+					jsonData.insertAdjacentHTML('beforeend', `
+						<div class = "minute">
+							<h4 class = "minutetitle">${post.title}</h4>
+							<a href="${post.minutepdf}" download>
+								<button class = "downloadbutton"><img class = "downloadimg" src="images/downloadbutton.png"><img class = "downloadicon" src="images/downloadicon.png"></button>
+							</a>
+						</div>
+					`);
+				});
+			});
+		</script>
+		
+	</body>
+	
+		<footer id="footer"> <!sets the footer>
+			<img class = "footerimage" src="images/footerimg.png"> <!pendle college logo in the footer>
+		</footer>
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> <!bootstrap script makes website responsive>
+	</body>
+</html>
