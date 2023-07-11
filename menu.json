@@ -1,0 +1,42 @@
+[
+    {
+        "type": "food",
+        "name": "Pizza",
+        "price": "£6.50"
+    },
+    {
+        "type": "drink",
+        "name": "Coke",
+        "price": "£2.00"
+    },
+    {
+        "type": "food",
+        "name": "Burger",
+        "price": "£7.50"
+    },
+    {
+        "type": "drink",
+        "name": "Lemonade",
+        "price": "£1.50"
+    },
+    {
+        "type": "food",
+        "name": "Pasta",
+        "price": "£5.00"
+    },
+    {
+        "type": "drink",
+        "name": "Water",
+        "price": "£1.00"
+    },
+    {
+        "type": "food",
+        "name": "Salad",
+        "price": "£4.50"
+    },
+    {
+        "type": "drink",
+        "name": "Tea",
+        "price": "£2.50"
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "day": "Saturday1",
+        "name": "Activity",
+        "shortdesc": "Settling into Pendle!",
+        "time": "10:00am",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur eros auctor lectus vestibulum congue. Donec euismod mi ut neque bibendum auctor. Maecenas euismod dolor quis augue aliquet, non consectetur nibh aliquam. Ut quis massa libero. Nam elementum leo non dolor pharetra, non faucibus nunc malesuada. "
+    },
+    {
+        "day": "Saturday1",
+        "name": "Activity1",
+        "shortdesc": "Settling into Pendle!",
+        "time": "3:30pm",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur eros auctor lectus vestibulum congue. Donec euismod mi ut neque bibendum auctor. Maecenas euismod dolor quis augue aliquet, non consectetur nibh aliquam. Ut quis massa libero. Nam elementum leo non dolor pharetra, non faucibus nunc malesuada. "
+    },
+    {
+        "day": "Monday",
+        "name": "Activity7",
+        "shortdesc": "Settling into Pendle!",
+        "time": "3:30pm",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur eros auctor lectus vestibulum congue. Donec euismod mi ut neque bibendum auctor. Maecenas euismod dolor quis augue aliquet, non consectetur nibh aliquam. Ut quis massa libero. Nam elementum leo non dolor pharetra, non faucibus nunc malesuada. "
+    },
+    {
+        "day": "Tuesday",
+        "name": "Activity5",
+        "shortdesc": "Settling into Pendle!",
+        "time": "3:30pm",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur eros auctor lectus vestibulum congue. Donec euismod mi ut neque bibendum auctor. Maecenas euismod dolor quis augue aliquet, non consectetur nibh aliquam. Ut quis massa libero. Nam elementum leo non dolor pharetra, non faucibus nunc malesuada. "
+    },
+    {
+        "day": "Wednesday",
+        "name": "Activity6",
+        "shortdesc": "Settling into Pendle!",
+        "time": "3:30pm",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur eros auctor lectus vestibulum congue. Donec euismod mi ut neque bibendum auctor. Maecenas euismod dolor quis augue aliquet, non consectetur nibh aliquam. Ut quis massa libero. Nam elementum leo non dolor pharetra, non faucibus nunc malesuada. "
+    },
+    {
+        "day": "Thursday",
+        "name": "Activity8",
+        "shortdesc": "Settling into Pendle!",
+        "time": "3:30pm",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur eros auctor lectus vestibulum congue. Donec euismod mi ut neque bibendum auctor. Maecenas euismod dolor quis augue aliquet, non consectetur nibh aliquam. Ut quis massa libero. Nam elementum leo non dolor pharetra, non faucibus nunc malesuada. "
+    },
+    {
+        "day": "Friday",
+        "name": "Activity9",
+        "shortdesc": "Settling into Pendle!",
+        "time": "3:30pm",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur eros auctor lectus vestibulum congue. Donec euismod mi ut neque bibendum auctor. Maecenas euismod dolor quis augue aliquet, non consectetur nibh aliquam. Ut quis massa libero. Nam elementum leo non dolor pharetra, non faucibus nunc malesuada. "
+    },
+    {
+        "day": "Sunday1",
+        "name": "Activity3",
+        "shortdesc": "Settling into Pendle!",
+        "time": "3:30pm",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur eros auctor lectus vestibulum congue. Donec euismod mi ut neque bibendum auctor. Maecenas euismod dolor quis augue aliquet, non consectetur nibh aliquam. Ut quis massa libero. Nam elementum leo non dolor pharetra, non faucibus nunc malesuada. "
+    },
+    {
+        "day": "Saturday2",
+        "name": "Activity2",
+        "shortdesc": "Settling into Pendle!",
+        "time": "11:00am",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur eros auctor lectus vestibulum congue. Donec euismod mi ut neque bibendum auctor. Maecenas euismod dolor quis augue aliquet, non consectetur nibh aliquam. Ut quis massa libero. Nam elementum leo non dolor pharetra, non faucibus nunc malesuada. "
+    },
+    {
+        "day": "Sunday2",
+        "name": "Activity4",
+        "shortdesc": "Settling into Pendle!",
+        "time": "11:00am",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur eros auctor lectus vestibulum congue. Donec euismod mi ut neque bibendum auctor. Maecenas euismod dolor quis augue aliquet, non consectetur nibh aliquam. Ut quis massa libero. Nam elementum leo non dolor pharetra, non faucibus nunc malesuada. "
+    }
+]
