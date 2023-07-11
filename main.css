@@ -597,7 +597,7 @@ ol{
 	margin-right: 15px;
 }
 
-.downloadicon{
+.downloadi{
 	display: none;
 }
 
@@ -945,7 +945,7 @@ ol{
 		display: none;
 	}
 	
-	.downloadicon{
+	.downloadi{
 		width: 45px;
 		height: 40px;
 		margin-right: 15px;
