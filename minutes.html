@@ -74,11 +74,15 @@
 					<div class="headingdesc">
 						<h2> Minutes</h2> <!heading minutes>
 						<div class = yline> </div> <!the yellow line under the heading>
-						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim vel lectus nec congue. Sed quis lorem metus. Nullam id quam id velit scelerisque posuere. Pellentesque at quam ac lacus dictum condimentum ac a justo. Nunc suscipit, neque vitae congue ultrices, risus nunc facilisis erat, vitae ultricies tellus lorem eget lorem. Cras eu turpis lacus. Vivamus lobortis, orci non feugiat varius, lorem sem vestibulum mi, id vehicula nibh ipsum at erat. Nullam lacinia metus dolor, id viverra enim auctor id. Mauris id tincidunt nulla, eget lobortis mi.</p>
+						<p> At Pendle College, transparency and communication are very important to us. That's why we provide all the minutes from our meetings below, available for download as a PDF.</p>
 					</div>
 				</div> 
 
 				<div class = "eventbar"></div>
+
+				<div class = "minuteSpinner">
+					<div id="loadingSpinner" class="spinner"></div>
+				</div>
 
 				<div id = "minutes"></div>
 
@@ -88,9 +92,10 @@
 		<script>
 			let jsonData = document.getElementById('minutes');
 
-			fetch('./minutes.json') //fetch gets the data from welcome.json
+			fetch('https://script.google.com/macros/s/AKfycbwcsjUvWq-U_M9GvS79FnSQG8eeJ1cTPlhJAayxs_TmSXjEg658R1pTbaHivJqaRZrKkw/exec') //fetch gets the data 
 			.then(res => res.json()) //converts the json to normal javascript
 			.then(data => { //parsed data
+				document.getElementById('loadingSpinner').style.display = 'none';
 				data.forEach(post => {
 					jsonData.insertAdjacentHTML('beforeend', `
 						<div class = "minute">

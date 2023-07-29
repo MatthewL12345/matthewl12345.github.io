@@ -74,11 +74,15 @@
 					<div class="headingdesc">
 						<h2> FAQs</h2> <!heading faqs>
 						<div class = yline> </div> <!the yellow line under the heading>
-						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim vel lectus nec congue. Sed quis lorem metus. Nullam id quam id velit scelerisque posuere. Pellentesque at quam ac lacus dictum condimentum ac a justo. Nunc suscipit, neque vitae congue ultrices, risus nunc facilisis erat, vitae ultricies tellus lorem eget lorem. Cras eu turpis lacus. Vivamus lobortis, orci non feugiat varius, lorem sem vestibulum mi, id vehicula nibh ipsum at erat. Nullam lacinia metus dolor, id viverra enim auctor id. Mauris id tincidunt nulla, eget lobortis mi.</p>
+						<p> Here are some FAQs that may be able to clear any confusion or answer your query. If your query is not answered here, then please do not hesitate to contact us.</p>
 					</div>
 				</div> <!a gap collum>
 
 				<div class = "eventbar"></div>
+
+				<div class = "spinnerContainer">
+					<div id="loadingSpinner" class="spinner"></div>
+				</div>
 
 				<div id="faqs"></div>
 			
@@ -88,9 +92,10 @@
 		<script>
 			let jsonData = document.getElementById('faqs');
 
-			fetch('./faq.json') //fetch gets the data from welcome.json
+			fetch('https://script.google.com/macros/s/AKfycbxMKJ0XAAp485rdOxesnZ_5WZRseFvtT_iaT_ANUituRHzsJrYVzkOdhe2xcNsmd7Bw/exec') //fetch gets the data
 			.then(res => res.json()) //converts the json to normal javascript
 			.then(data => { //parsed data
+				document.getElementById('loadingSpinner').style.display = 'none';
 				data.forEach(post => {
 					jsonData.insertAdjacentHTML('beforeend', `
 						<div class = "faq">

@@ -610,6 +610,46 @@ ol{
 	width: 50%; /*sets brewdesc to 50% width*/
 }
 
+.spinnerContainer{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.spinner{
+	border: 15px solid #f3f3f3; /* Light grey */
+	border-top: 15px solid #1B4315; /* sets the loop to green */
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	animation: spin 1.5s linear infinite;
+	justify-content: center;
+}
+
+#loadingSpinner{
+	margin-top: 60px; 
+}
+
+#mSpinner, #lSpinner, #sSpinner{
+	margin-top: 60px; 
+}
+
+#foodSpinner, #drinksSpinner{
+	margin-top: 10px;
+}
+
+.minuteSpinner{
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+  
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
 @media only screen and (max-width: 1500px) { /*if the width is 1500px or below do the following...*/
 	/*sets satarday1 to width 10% and colour to pendle green*/
 	#saturday1{
@@ -696,6 +736,10 @@ ol{
 	}
 
 	.minute{
+		width: 100%;
+	}
+
+	.minuteSpinner{
 		width: 100%;
 	}
 }

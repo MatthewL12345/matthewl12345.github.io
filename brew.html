@@ -74,7 +74,7 @@
 					<div class="brewdesc">
 						<h2> Pendle Brew</h2> <!heading pendle brew>
 						<div class = yline> </div> <!the yellow line under the heading>
-						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim vel lectus nec congue. Sed quis lorem metus. Nullam id quam id velit scelerisque posuere. Pellentesque at quam ac lacus dictum condimentum ac a justo. Nunc suscipit, neque vitae congue ultrices, risus nunc facilisis erat, vitae ultricies tellus lorem eget lorem. Cras eu turpis lacus. Vivamus lobortis, orci non feugiat varius, lorem sem vestibulum mi, id vehicula nibh ipsum at erat. Nullam lacinia metus dolor, id viverra enim auctor id. Mauris id tincidunt nulla, eget lobortis mi.</p>
+						<p> Pendle Brew is the main college communal area. Many students choose to study, relax, or have meetings there during the day, but it can also be booked to hold events in and is home to Pendle Live, our music event. The bar at Pendle Brew offers food and drink; you can check the menu below. Pendle Brew also has a number of facilities, such as the Music Room and Harpley Lounge.</p>
 					</div>
 				
 					<div class="brewimg">
@@ -93,6 +93,10 @@
 							<div class = ylinetable> </div> <!the yellow line under the heading>
 						</div>
 
+						<div class = "spinnerContainer">
+							<div id="foodSpinner" class="spinner"></div>
+						</div>
+
 						<div id="fooditems">
 							
 						</div>
@@ -109,6 +113,10 @@
 							<div class = ylinetable> </div> <!the yellow line under the heading>
 						</div>
 
+						<div class = "spinnerContainer">
+							<div id="drinksSpinner" class="spinner"></div>
+						</div>
+
 						<div id="drinksitems">
 							
 						</div>
@@ -118,9 +126,9 @@
 				<div class="brew"> 
 				
 					<div class="brewdesc">
-						<h2> Harply Lounge</h2> <!heading pendle brew>
+						<h2> Harpley Lounge</h2> <!heading pendle brew>
 						<div class = yline> </div> <!the yellow line under the heading>
-						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim vel lectus nec congue. Sed quis lorem metus. Nullam id quam id velit scelerisque posuere. Pellentesque at quam ac lacus dictum condimentum ac a justo. Nunc suscipit, neque vitae congue ultrices, risus nunc facilisis erat, vitae ultricies tellus lorem eget lorem. Cras eu turpis lacus. Vivamus lobortis, orci non feugiat varius, lorem sem vestibulum mi, id vehicula nibh ipsum at erat. Nullam lacinia metus dolor, id viverra enim auctor id. Mauris id tincidunt nulla, eget lobortis mi.</p>
+						<p> The Harpley Lounge is the perfect place in Pendle for meetings or relaxation. This area is home to the Pendle mural, along with the JCR office.</p>
 					</div>
 				
 					<div class="brewimg">
@@ -133,7 +141,7 @@
 					<div class="brewdesc">
 						<h2> Music Room</h2> <!heading pendle brew>
 						<div class = yline> </div> <!the yellow line under the heading>
-						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim vel lectus nec congue. Sed quis lorem metus. Nullam id quam id velit scelerisque posuere. Pellentesque at quam ac lacus dictum condimentum ac a justo. Nunc suscipit, neque vitae congue ultrices, risus nunc facilisis erat, vitae ultricies tellus lorem eget lorem. Cras eu turpis lacus. Vivamus lobortis, orci non feugiat varius, lorem sem vestibulum mi, id vehicula nibh ipsum at erat. Nullam lacinia metus dolor, id viverra enim auctor id. Mauris id tincidunt nulla, eget lobortis mi.</p>
+						<p> Pendle College has a reputation for being the music college, so to live up to that reputation, we provide a music room for students who wish to practice music in a conducive environment.</p>
 					</div>
 				
 					<div class="brewimg">
@@ -148,10 +156,11 @@
 		let jsonData = document.getElementById('fooditems');
 		let type = 'food';
 
-		fetch('./menu.json') //fetch gets the data from welcome.json
+		fetch('https://script.google.com/macros/s/AKfycbzKwJcX4Vu8a30tQTNgJJ-YtdDL9yg6216pHZL6PU1NBZjp7U5RvQ06aqdiA5K3gzwbog/exec')
 			  .then(res => res.json()) //converts the json to normal javascript
 			  .then(data => { //parsed data
-
+				document.getElementById('foodSpinner').style.display = 'none';
+				document.getElementById('drinksSpinner').style.display = 'none';
 			data.forEach(post => {
 				if(post.type === type) {
 					jsonData.insertAdjacentHTML('beforeend', `

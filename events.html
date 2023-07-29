@@ -74,7 +74,7 @@
 					<div class="headingdesc">
 						<h2> Events</h2> <!heading events>
 						<div class = yline> </div> <!the yellow line under the heading>
-						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim vel lectus nec congue. Sed quis lorem metus. Nullam id quam id velit scelerisque posuere. Pellentesque at quam ac lacus dictum condimentum ac a justo. Nunc suscipit, neque vitae congue ultrices, risus nunc facilisis erat, vitae ultricies tellus lorem eget lorem. Cras eu turpis lacus. Vivamus lobortis, orci non feugiat varius, lorem sem vestibulum mi, id vehicula nibh ipsum at erat. Nullam lacinia metus dolor, id viverra enim auctor id. Mauris id tincidunt nulla, eget lobortis mi.</p>
+						<p> Pendle JCR holds a number of events throughout the academic year. Below is a timetable of the events being held for each term. Please check this table, as it is updated frequently with new events. Also, events in the Summer Term may be more limited due to the exam period.</p>
 					</div>
 				</div> <!a gap collum>
 
@@ -179,6 +179,11 @@
 				</div>
 
 				<div style="clear:both;"></div>
+
+				<div class = "spinnerContainer">
+					<div id="mSpinner" class="spinner"></div>
+				</div>
+
 				<div class="eventbar"></div>
 
 				<div class="menus">
@@ -282,6 +287,11 @@
 				</div>
 
 				<div style="clear:both;"></div>
+
+				<div class = "spinnerContainer">
+					<div id="lSpinner" class="spinner"></div>
+				</div>
+
 				<div class="eventbar"></div>
 
 				<div class="menus">
@@ -384,7 +394,13 @@
 					</div> 
 				</div>
 
+				<div style="clear:both;"></div>
 
+				<div class = "spinnerContainer">
+					<div id="sSpinner" class="spinner"></div>
+				</div>
+
+				<div class="eventbar"></div>
 			
 			</div>
 		</div>
@@ -495,9 +511,10 @@
 			});
 		}
 
-		fetch('./michaelmas.json') //fetch gets the data from welcome.json
+		fetch('https://script.google.com/macros/s/AKfycbwU05uv3ZuOR7psBHHIgL4XRPtP4KwQeSUiKoHpeR8pk3STGKH_WNs-XC4ZqllgpUiI/exec') //fetch gets the data
 			.then(res => res.json()) //converts the json to normal javascript
 			.then(data => { //parsed data
+				document.getElementById('mSpinner').style.display = 'none';
 				processWeekData(data, 'week1', document.getElementById('week1M'));
 				processWeekData(data, 'week2', document.getElementById('week2M'));
 				processWeekData(data, 'week3', document.getElementById('week3M'));
@@ -508,12 +525,12 @@
 				processWeekData(data, 'week8', document.getElementById('week8M'));
 				processWeekData(data, 'week9', document.getElementById('week9M'));
 				processWeekData(data, 'week10', document.getElementById('week10M'));
-				// Add more weeks as needed...
 			});
 
-		fetch('./lent.json') //fetch gets the data from welcome.json
+		fetch('https://script.google.com/macros/s/AKfycbztodqhdIgmsQFp9ibbLGzlu7lCyO2LpSPMeTouRaVLL-E-NJzg1WJs4K4x8o8IL3EENQ/exec') //fetch gets the data
 			.then(res => res.json()) //converts the json to normal javascript
 			.then(data => { //parsed data
+				document.getElementById('lSpinner').style.display = 'none';
 				processWeekData(data, 'week1', document.getElementById('week1L'));
 				processWeekData(data, 'week2', document.getElementById('week2L'));
 				processWeekData(data, 'week3', document.getElementById('week3L'));
@@ -524,12 +541,12 @@
 				processWeekData(data, 'week8', document.getElementById('week8L'));
 				processWeekData(data, 'week9', document.getElementById('week9L'));
 				processWeekData(data, 'week10', document.getElementById('week10L'));
-				// Add more weeks as needed...
 			});
 
-		fetch('./summer.json') //fetch gets the data from welcome.json
+		fetch('https://script.google.com/macros/s/AKfycbwKNG9DMr-e4e13TvWqxsbvSb2DApN3mR5d5MY984xXLXFMzPa9di5CLMj81U-oid2v/exec') //fetch gets the data
 			.then(res => res.json()) //converts the json to normal javascript
 			.then(data => { //parsed data
+				document.getElementById('sSpinner').style.display = 'none';
 				processWeekData(data, 'week1', document.getElementById('week1S'));
 				processWeekData(data, 'week2', document.getElementById('week2S'));
 				processWeekData(data, 'week3', document.getElementById('week3S'));
@@ -540,7 +557,6 @@
 				processWeekData(data, 'week8', document.getElementById('week8S'));
 				processWeekData(data, 'week9', document.getElementById('week9S'));
 				processWeekData(data, 'week10', document.getElementById('week10S'));
-				// Add more weeks as needed...
 			});
 
 		</script>

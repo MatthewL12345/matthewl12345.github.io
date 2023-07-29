@@ -74,9 +74,13 @@
 					<div class="headingdesc">
 						<h2> Sports Teams</h2> <!heading sports teams>
 						<div class = yline> </div> <!the yellow line under the heading>
-						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim vel lectus nec congue. Sed quis lorem metus. Nullam id quam id velit scelerisque posuere. Pellentesque at quam ac lacus dictum condimentum ac a justo. Nunc suscipit, neque vitae congue ultrices, risus nunc facilisis erat, vitae ultricies tellus lorem eget lorem. Cras eu turpis lacus. Vivamus lobortis, orci non feugiat varius, lorem sem vestibulum mi, id vehicula nibh ipsum at erat. Nullam lacinia metus dolor, id viverra enim auctor id. Mauris id tincidunt nulla, eget lobortis mi.</p>
+						<p> Sports are an important part of college life; that's why the JCR puts on several sporting events throughout the year. We also have Pendle College sports teams. Below are the current sports teams for Pendle College.</p>
 					</div>
 				</div> <!a gap collum>
+
+				<div class = "spinnerContainer">
+					<div id="loadingSpinner" class="spinner"></div>
+				</div>
 
 				<div id = "sports"></div>
 			
@@ -85,9 +89,10 @@
 
 		<script>
 			let jsonData = document.getElementById('sports');
-			fetch('./sports.json') //fetch gets the data from welcome.json
+			fetch('https://script.google.com/macros/s/AKfycbyXGiAu69_Uz7kumucAcsqx-uXfcPe7YT5gW5aYX30pXCyOD62rrVK5lcm1h8KFGyuPCA/exec') //fetch gets the data for sports
 			.then(res => res.json()) //converts the json to normal javascript
 			.then(data => { //parsed data
+				document.getElementById('loadingSpinner').style.display = 'none';
 				data.forEach(post => {
 		
 					// Create a string representing the team members list

@@ -79,11 +79,15 @@
 					<div class="section">
 						<h2> Meet the JCR </h2> <!heading meet the jcr>
 						<div class = yline> </div> <!the yellow line under the heading>
-						<p> Lorem ipsn dolor sit amet, coonsectetur adipiscing elit, sed do eiusmotempor incicint ut labore et dolore magna aliqua. ut enim aa mris nisi utaleniam, quis nostrud cat.Duis aute irure dolor in reprenderit in voluptavelit esse cillum dolore eu fugiat nulla pariatur. Excoroident.suntin culpa gul offcle deserunt mollit animistlabonu</p> <!the text for meet the jcr>
+						<p> JCR stands for Junior Common Room, and every undergraduate college has one. Meet the current Pendle JCR Exec below. Being a member of the JCR is a voluntary role that requires commitment. If you think you would be a good fit for the JCR, keep an eye out for elections and co-options.</p> <!the text for meet the jcr>
 					</div>
 				</div>
 				
 				<div class="darkBG col-xl-6"> </div> <!a gap collum>
+
+				<div class = "spinnerContainer">
+					<div id="loadingSpinner" class="spinner"></div>
+				</div>
 				
 				</div>
 			
@@ -97,9 +101,10 @@
 	<script>
 		const jsonData = document.getElementById('row'); //where the html will be inserted
 
-		fetch('./jcr.json') //fetch gets the data from jcr.json
+		fetch('https://script.google.com/macros/s/AKfycbwOZ5Y2UoNzRHYhUKGS3bbGiG2CkIr_KRXL2AS_UIe4SQQm-cy2sbvaOK4RuVOQ5JXXyA/exec') //fetch gets the data
 			.then(res => res.json()) //converts the json to normal javascript
 			.then(data => { //parsed data
+				document.getElementById('loadingSpinner').style.display = 'none';
 				data.forEach(post => { //loop over each object in the array
 					//create this html code for each object using data from that object
 					jsonData.insertAdjacentHTML('beforeend', ` 

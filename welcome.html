@@ -74,7 +74,7 @@
 						<div class="headingdesc">
 							<h2> Welcome Week</h2> <!heading pendle brew>
 							<div class = yline> </div> <!the yellow line under the heading>
-							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim vel lectus nec congue. Sed quis lorem metus. Nullam id quam id velit scelerisque posuere. Pellentesque at quam ac lacus dictum condimentum ac a justo. Nunc suscipit, neque vitae congue ultrices, risus nunc facilisis erat, vitae ultricies tellus lorem eget lorem. Cras eu turpis lacus. Vivamus lobortis, orci non feugiat varius, lorem sem vestibulum mi, id vehicula nibh ipsum at erat. Nullam lacinia metus dolor, id viverra enim auctor id. Mauris id tincidunt nulla, eget lobortis mi.</p>
+							<p> Welcome Week is a student's first interaction with university life and the time when college bonds are at their strongest. The JCR puts on many events throughout the week to ensure you can make the most of your first week at university and have a great time while making many new friends. We understand that starting university can be a daunting time, but we are here to help. Please check our FAQ page and Contact page if you have any questions or queries.</p>
 						</div>
 					</div> <!a gap collum>
 	
@@ -83,6 +83,10 @@
 						<h2>  Weclome Week Events</h2> <!heading pendle brew>
 						<div class = yline> </div> <!the yellow line under the heading>
 	
+					</div>
+
+					<div class = "spinnerContainer">
+						<div id="loadingSpinner" class="spinner"></div>
 					</div>
 					
 					<div id="welcometable"> <!the table for welcome week>
@@ -519,9 +523,10 @@
 				minusbutton.style.display ="block"; //shows minus button
 			}
 	
-			fetch('./welcome.json') //fetch gets the data from welcome.json
+			fetch('https://script.google.com/macros/s/AKfycbyz1R1DUfHmjjZFrZbkTprnXNS6q9-tlr-OZsDgFwI8SR3rPKCwUEvmYawH0dJbKwc/exec') //fetch gets the data
 			  .then(res => res.json()) //converts the json to normal javascript
 			  .then(data => { //parsed data
+				document.getElementById('loadingSpinner').style.display = 'none';
 				
 				data.forEach(post => { //loop over each object in the array
 				  if (post.day === day) { //check if the post name matches the name to display

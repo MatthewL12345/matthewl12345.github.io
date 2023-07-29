@@ -83,7 +83,7 @@
 					<div class="section">
 						<h2> About Us </h2> <!about us heading>
 						<div class = yline> </div> <!yellow line under heading>
-						<p> Lorem ipsn dolor sit amet, coonsectetur adipiscing elit, sed do eiusmotempor incicint ut labore et dolore magna aliqua. ut enim aa mris nisi utaleniam, quis nostrud cat.Duis aute irure dolor in reprenderit in voluptavelit esse cillum dolore eu fugiat nulla pariatur. Excoroident.suntin culpa gul offcle deserunt mollit animistlabonu</p> <!about us paragraph>
+						<p> Pendle College is one of nine colleges at Lancaster University. This website is run by the Pendle JCR and provides information to current and prospective students on topics such as sports, events, and welcome week. We believe this website is vital for ensuring efficient communication between you and Pendle JCR so you can make the most of your college experience. If you have any questions or queries, please check out the FAQ page and the Contact page.</p> <!about us paragraph>
 					</div>
 					
 					<div class="gap"> </div> <!gap inbetween about us and updates>
@@ -91,7 +91,10 @@
 					<div class="section">
 						<h2> Updates </h2> <!updates heading>
 						<div class = yline> </div> <!yellow line under heading>
-						<p> Lorem ipsn dolor sit amet, coonsectetur adipiscing elit, sed do eiusmotempor incicint ut labore et dolore magna aliqua. ut enim aa mris nisi utaleniam, quis nostrud cat.Duis aute irure dolor in reprenderit in voluptavelit esse cillum dolore eu fugiat nulla pariatur. Excoroident.suntin culpa gul offcle deserunt mollit animistlabonu</p> <!updates paragraph>
+						<p> Below are the latest updates on what is happening at Pendle College.</p> <!updates paragraph>
+						<div class = "spinnerContainer">
+							<div id="loadingSpinner" class="spinner"></div>
+						</div>
 						<div id = "updates"></div>
 					</div>
 				
@@ -119,9 +122,10 @@
 		<script>
 			let jsonData = document.getElementById('updates');
 
-			fetch('./updates.json') //fetch gets the data from welcome.json
+			fetch('https://script.google.com/macros/s/AKfycbxV_3Tu0DYRa1kLjQqfsKmpJM10VJ3Zy1-32x2uO2iJEyyTwMYxzF_KuUC8ZuAdZyTqEw/exec') //fetch gets the data 
 			.then(res => res.json()) //converts the json to normal javascript
 			.then(data => { //parsed data
+				document.getElementById('loadingSpinner').style.display = 'none';
 				data.forEach(post => {
 					jsonData.insertAdjacentHTML('beforeend', `
 						<h5 class = "question">${post.updatetitle}</h5>
