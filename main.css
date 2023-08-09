@@ -99,6 +99,7 @@ h2 {
 	min-width: 80%; /*max width is 80%*/
 	max-width: 80%; /*max width of image is 80%*/
 	height: auto; /*height will be adjusted automatticly based on the width of the image*/
+	max-height: 500px;
 }
 
 #name{
